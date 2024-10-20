@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #FFF3EA;
     --foreground: #ededed;
   }
 }
@@ -30,7 +30,16 @@ body {
   background: linear-gradient(0deg, #753F21, #753F21),
 linear-gradient(84.74deg, rgba(255, 255, 255, 0) 8.76%, rgba(11, 7, 4, 0.2) 71.03%);
 }
+.product-card{
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+  linear-gradient(181.11deg, rgba(255, 255, 255, 0) 0.95%, rgba(117, 63, 33, 0.3) 99.09%);
+}
 
+.discount-banner{
+  background: linear-gradient(0deg, #201913, #201913),
+linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 243, 234, 0.05) 100%);
+
+}
 
 @layer utilities {
   .text-balance {

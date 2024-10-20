@@ -4,7 +4,7 @@ import { LogoIcon } from "../_icons/Logo"
 export function NavBar() {
     return (
         <header className="flex bg-[#FFF3EA] py-6 px-8 transition-all">
-            <nav className="flex items-center justify-around w-full transition-all">
+            <nav className="flex items-center justify-around w-full transition-all max-sm:hidden">
                 <Link href='/' className="text-[#753F21] font-semibold">
                     HOME
                 </Link>
