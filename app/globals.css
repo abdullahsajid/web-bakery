@@ -38,6 +38,11 @@ linear-gradient(84.74deg, rgba(255, 255, 255, 0) 8.76%, rgba(11, 7, 4, 0.2) 71.0
 .discount-banner{
   background: linear-gradient(0deg, #201913, #201913),
 linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 243, 234, 0.05) 100%);
+}
+
+.footer-bg{
+  background: linear-gradient(0deg, #201913, #201913),
+linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 243, 234, 0.05) 100%);
 
 }
 

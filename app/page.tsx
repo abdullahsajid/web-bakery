@@ -5,6 +5,7 @@ import { Discount } from "./_components/Discount";
 import { Nutrition } from "./_components/Nutrition";
 import { Customer } from "./_components/Customer";
 import { BannerBottom } from "./_icons/BannerBottom";
+import { Footer } from "./_components/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Discount/>
       <Nutrition/>
       <Customer/>
+      <Footer/>
     </>
   );
 }
