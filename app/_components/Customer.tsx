@@ -1,4 +1,5 @@
 import {Seeds2} from "../_icons/Seeds2"
+import TestimonialSlider from "./CustomerSlider"
 export function Customer(){
     return (
         <div className="relative mt-10">
@@ -8,6 +9,9 @@ export function Customer(){
             </div>
             <div className="absolute right-0 bottom-0">
                 <Seeds2/>
+            </div>
+            <div className="min-h-screen mx-auto">
+                <TestimonialSlider/>
             </div>
         </div>
     )
