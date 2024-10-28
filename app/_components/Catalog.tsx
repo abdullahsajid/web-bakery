@@ -9,7 +9,7 @@ export function Catalog() {
                 <Seeds />
             </div>
             <CatalogNav/>
-            <div className="grid grid-cols-3 px-16 mt-5 gap-3">
+            <div className="grid grid-cols-3 max-sm:grid-cols-1 px-16 max-sm:px-7 mt-5 gap-3">
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />

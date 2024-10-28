@@ -14,7 +14,7 @@ export function OurStory(){
             <div className="absolute right-0 top-0">
                 <Rusk/>
             </div>
-            <div className="grid grid-cols-2 px-20 mt-10">
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 px-20 mt-10 max-sm:px-10">
                 <div className="grid grid-cols-2 items-center justify-center">
                     <div className="flex items-center justify-center">
                         <Image src={avatar} alt="avatar"/>

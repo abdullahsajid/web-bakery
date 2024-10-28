@@ -1,6 +1,6 @@
 export function DonutColor(){
     return (
-        <svg width="150" height="110" viewBox="0 0 150 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="150" height="110" viewBox="0 0 150 110" fill="none" xmlns="http://www.w3.org/2000/svg" className="max-sm:w-[90px] max-sm:h-[90px]">
 <g clip-path="url(#clip0_1723_1585)">
 <path d="M49.9361 55.2734C43.7792 58.1483 22.6074 69.7422 16.4398 72.6171C12.1863 74.6059 7.82644 76.6608 4.74265 79.9033C1.65886 83.1458 -0.0212811 87.8776 1.97787 91.7516C4.10462 95.9273 9.91066 97.8596 15.0787 97.4637C20.2467 97.0678 25.1276 93.6933 29.6894 91.5254C37.1969 87.9341 56.9651 76.246 64.4619 72.6736" stroke="#753F21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M56.9119 25.6758C53.105 27.0614 49.6597 29.3802 48.0965 32.7546C46.6396 36.1831 46.1115 39.867 46.5546 43.5096C47.7881 56.8849 57.6669 68.6766 69.8851 76.6038C82.1033 84.531 118.8 96.8223 133.081 101.375" stroke="#753F21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

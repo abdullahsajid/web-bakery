@@ -111,7 +111,7 @@ export default function TestimonialCarousel() {
         {testimonials.map((testimonial, index) => (
           <div
             key={testimonial.id}
-            className="absolute top-0 w-[490px]"
+            className="absolute top-0 w-[490px] max-sm:w-[290px]"
             style={getCardStyle(index)}
           >
             <div className="bg-white rounded-[50px] p-8 shadow-lg border border-[#753F21]">
