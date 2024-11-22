@@ -1,5 +1,5 @@
 import { DonutNav } from "../_icons/DonutNav"
-import { Pastry } from "../_icons/pastry"
+import { Pastry } from "../_icons/Pastry"
 import { CupCak } from "../_icons/CupCake"
 import { Brownies } from "../_icons/Brownies"
 import { Cake } from "../_icons/Cake"
