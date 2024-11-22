@@ -10,7 +10,7 @@ export function Customer(){
             <div className="absolute right-0 bottom-0">
                 <Seeds2/>
             </div>
-            <div className="min-h-screen mx-auto">
+            <div className="mx-auto">
                 <TestimonialSlider/>
             </div>
         </div>

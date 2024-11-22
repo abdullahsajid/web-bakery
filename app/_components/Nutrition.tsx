@@ -1,9 +1,7 @@
 import { ChocolateBar } from "../_icons/ChocolateBar"
 import { DonutColor } from "../_icons/DonutColor"
 import Image from "next/image"
-import Bread from "../../public/assets/bread.png"
-import BreadImg from "../../public/assets/breadImg.jpg"
-import bread from "../../public/assets/Frame 208.jpg"
+import bread from "../../public/assets/file.png"
 
 export function Nutrition(){
     return (
@@ -17,7 +15,7 @@ export function Nutrition(){
                 <ChocolateBar/>
             </div>
             <div className="w-full flex items-center justify-center">
-                <Image src={Bread} alt="Bread" className="max-sm:w-full"/>
+                <Image src={bread} alt="Bread" className="max-sm:w-full w-[700px] h-[600px]"/>
             </div>
             <div className="absolute left-0 bottom-0">
                 <DonutColor/>

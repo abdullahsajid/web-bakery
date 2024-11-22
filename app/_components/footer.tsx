@@ -1,4 +1,5 @@
 import { LogoIcon } from "../_icons/Logo"
+import { Facebook,Twitter,Instagram} from "lucide-react"
 
 export function Footer() {
     return (
@@ -37,6 +38,17 @@ export function Footer() {
                 </div>
             </div>
             <hr className="bg-[#FFF3EA]"/>
+            <div className="flex justify-end items-center gap-5 mt-5 me-5">
+                <div className="bg-[#1D9BF0] rounded-md p-1 shadow">
+                    <Twitter color="#fff"/>
+                </div>
+                <div className="bg-[#1877F2] rounded-md p-1 shadow">
+                    <Facebook/>
+                </div>
+                <div className="insta rounded-md p-1 shadow">
+                    <Instagram/>
+                </div>
+            </div>
         </div>
     )
 }
