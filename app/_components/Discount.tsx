@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Cookie from "../../public/assets/cookie.png"
 import Cookies from "../../public/assets/Frame_210-removebg.png"
 
 export function Discount(){

@@ -3,7 +3,6 @@ import avatar from "../../public/assets/avatar.jpg"
 import avatar2 from "../../public/assets/avatar2.jpg"
 import Image from "next/image"
 import {Cookies} from "../_icons/cookies"
-import { Seeds } from "../_icons/Seeds"
 
 export function OurStory(){
     return (
@@ -26,7 +25,7 @@ export function OurStory(){
                 </div>
                 <div className="flex items-center justify-center ">
                     <p className="text-[#753F21] text-[20px]">
-                        A bakery shop is a warm, inviting place where fresh breads, pastries, and cakes are crafted daily. The aroma of baked goods fills the air, attracting customers who seek delicious treats and comforting flavors. With a variety of artisanal products made from quality ingredients, a bakery shop is a go-to for anyone craving both sweet and savory delights. It's a hub for local communities, offering a cozy spot to enjoy a snack or order custom-made goods for special occasions.
+                        A bakery shop is a warm, inviting place where fresh breads, pastries, and cakes are crafted daily. The aroma of baked goods fills the air, attracting customers who seek delicious treats and comforting flavors. With a variety of artisanal products made from quality ingredients, a bakery shop is a go-to for anyone craving both sweet and savory delights. It&apos;s a hub for local communities, offering a cozy spot to enjoy a snack or order custom-made goods for special occasions.
                     </p>
                 </div>
             </div>
