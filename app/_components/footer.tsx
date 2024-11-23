@@ -38,7 +38,7 @@ export function Footer() {
                 </div>
             </div>
             <hr className="bg-[#FFF3EA]"/>
-            <div className="flex justify-end items-center gap-5 mt-5 me-5">
+            <div className="flex justify-end items-center gap-5 mt-5 me-5 max-sm:me-0 max-sm:justify-center">
                 <div className="bg-[#1D9BF0] rounded-md p-1 shadow">
                     <Twitter color="#fff"/>
                 </div>
