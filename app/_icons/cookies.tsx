@@ -1,6 +1,6 @@
 export function Cookies() {
     return (
-        <svg width="311" height="207" viewBox="0 0 311 207" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="311" height="207" viewBox="0 0 311 207" fill="none" xmlns="http://www.w3.org/2000/svg" className="max-sm:w-[180px]">
 <g clip-path="url(#clip0_1616_1593)">
 <path d="M161.068 84.5179C161.068 84.5179 216.218 72.0761 258.696 110.618C301.174 149.159 225.793 212.97 143.258 179.373C60.7222 145.777 86.6428 94.7373 161.068 84.5179Z" fill="#753F21"/>
 <path d="M129.224 104.467C129.224 104.467 164.024 97.344 160.904 117.436C157.785 137.529 142.743 135.042 129.111 128.526C115.48 122.01 113.275 108.207 129.224 104.467Z" fill="#FFF3EA"/>

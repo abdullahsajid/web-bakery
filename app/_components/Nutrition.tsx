@@ -15,7 +15,7 @@ export function Nutrition(){
                 <ChocolateBar/>
             </div>
             <div className="w-full flex items-center justify-center">
-                <Image src={bread} alt="Bread" className="max-sm:w-full w-[700px] h-[600px]"/>
+                <Image src={bread} alt="Bread" className="max-sm:w-[400px] max-sm:h-[400px] w-[700px] h-[600px]"/>
             </div>
             <div className="absolute left-0 bottom-0">
                 <DonutColor/>

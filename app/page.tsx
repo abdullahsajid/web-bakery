@@ -4,7 +4,7 @@ import { Catalog } from "./_components/Catalog";
 import { Discount } from "./_components/Discount";
 import { Nutrition } from "./_components/Nutrition";
 import { Customer } from "./_components/Customer";
-import { Footer } from "./_components/footer";
+
 
 export default function Home() {
   return (
@@ -16,7 +16,6 @@ export default function Home() {
       <Discount/>
       <Nutrition/>
       <Customer/>
-      <Footer/>
     </>
   );
 }
