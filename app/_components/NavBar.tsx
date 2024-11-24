@@ -29,7 +29,7 @@ export function NavBar() {
                 <Link href='/' className="text-[#753F21] font-semibold">
                     CATALOG
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/about' className="text-[#753F21] font-semibold">
                     ABOUT US
                 </Link>
                 <Link href='/' className="flex items-center gap-1 text-[#753F21]">
@@ -59,13 +59,13 @@ export function NavBar() {
                 <Link href='/' className="text-[#753F21] font-semibold">
                     CATALOG
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/about' className="text-[#753F21] font-semibold">
                     ABOUT US
                 </Link>
                 <Link href='/' className="text-[#753F21] font-semibold">
                     DELIVERY
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/contact' className="text-[#753F21] font-semibold">
                     CONTACT
                 </Link>
                 <Link href='/' className="text-[#753F21] font-semibold">
