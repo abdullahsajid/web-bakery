@@ -10,7 +10,7 @@ export function NavBar() {
     return (
         <>
         <header className="flex bg-[#FFF3EA] py-6 px-8 max-sm:px-5 transition-all">
-            <nav className="flex items-center justify-between w-full transition-all relative">
+            <nav className="hidden max-sm:flex flex items-center justify-between w-full transition-all relative">
                 <div>
                     <Link href='/' className="flex items-center gap-1 text-[#753F21]">
                         <span className="text-[#753F21] text-[25px] font-bold max-sm:text-[20px]">SUPER</span>
