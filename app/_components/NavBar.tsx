@@ -40,7 +40,7 @@ export function NavBar() {
                 <Link href='/' className="text-[#753F21] font-semibold">
                     DELIVERY
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/contact' className="text-[#753F21] font-semibold">
                     CONTACT
                 </Link>
                 <Link href='/' className="text-[#753F21] font-semibold">
