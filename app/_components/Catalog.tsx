@@ -1,12 +1,12 @@
 'use client';
 import { Seeds } from "../_icons/Seeds"
 import { CatalogNav } from "./CatalogNav"
-import { ProductCard } from "./ProductCard"
+import { Product, ProductCard } from "./ProductCard"
 import { useNavStore } from "../store/nav-store";
 import { products } from "../utils/products";
 
 export function Catalog() {
-    const navStore : any = useNavStore();
+    const navStore = useNavStore();
     const currentProduct = products[navStore.currentProduct]
     
 
@@ -17,8 +17,8 @@ export function Catalog() {
             </div>
             <CatalogNav/>
             <div className="grid grid-cols-3 max-sm:grid-cols-1 px-16 max-sm:px-7 mt-5 gap-3">
-                {currentProduct.products.map((item:any,index:number) => {
-                    return <ProductCard product={item}/>
+                {currentProduct.products.map((item:Product,index:number) => {
+                    return <ProductCard key={index} product={item}/>
                 })}
             </div>
         </div>

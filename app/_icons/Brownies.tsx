@@ -2,8 +2,8 @@
 import { useNavStore } from "../store/nav-store"
 
 export function Brownies(){
-    const navStore : any = useNavStore();
-    const currentProduct : any = navStore.currentProduct;
+    const navStore = useNavStore();
+    const currentProduct = navStore.currentProduct;
     return (
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="40" cy="40" r="40" fill={`${currentProduct === 'brownies' ? "#753F21" : "#ffffff"}`}/>

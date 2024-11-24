@@ -1,4 +1,18 @@
-export const products : any = {
+type Product = {
+  id: number;
+  name: string;
+  image: string;
+};
+
+type CategoryData = {
+  products: Product[];
+};
+
+type Categories = {
+  [key: string]: CategoryData;
+};
+
+export const products : Categories = {
     donuts: {
         products: [
             {id: 1, name:'Glazed Donut', image:"../../public/assets/GlazedDonut.png"},

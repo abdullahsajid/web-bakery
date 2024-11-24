@@ -7,7 +7,7 @@ import { Cake } from "../_icons/Cake"
 import { useNavStore } from "../store/nav-store"
 
 export function CatalogNav() {
-    const navStore : any = useNavStore();
+    const navStore = useNavStore();
 
     const handlerNav = (product:string) => {
         navStore.setCurrentProduct(product)
