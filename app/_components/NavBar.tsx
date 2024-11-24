@@ -2,10 +2,10 @@
 import Link from "next/link"
 import { LogoIcon } from "../_icons/Logo"
 import { Menu,X } from 'lucide-react';
-import { useState } from "react";
+import { useNavStore } from "../store/nav-store";
 
 export function NavBar() {
-    const [isSidebarOpen,setIsSidebarOpen] = useState(false);
+    const {isSidebarOpen,setIsSidebarOpen} = useNavStore();
     
     return (
         <>
@@ -59,13 +59,15 @@ export function NavBar() {
                 <Link href='/' className="text-[#753F21] font-semibold">
                     CATALOG
                 </Link>
-                <Link href='/about' className="text-[#753F21] font-semibold">
+                <Link href='/about' className="text-[#753F21] font-semibold"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     ABOUT US
                 </Link>
                 <Link href='/' className="text-[#753F21] font-semibold">
                     DELIVERY
                 </Link>
-                <Link href='/contact' className="text-[#753F21] font-semibold">
+                <Link href='/contact' className="text-[#753F21] font-semibold"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     CONTACT
                 </Link>
                 <Link href='/' className="text-[#753F21] font-semibold">
