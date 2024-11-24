@@ -1,7 +1,13 @@
+'use client';
+import { useNavStore } from "../store/nav-store"
+
 export function Cake(){
+    const navStore : any = useNavStore();
+    const currentProduct : any = navStore.currentProduct;
+
     return (
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="40" cy="40" r="40" fill="white"/>
+<circle cx="40" cy="40" r="40" fill={`${currentProduct === 'cake' ? "#753F21" : "#ffffff"}`}/>
 <path d="M17.0331 42.7969V54.565C17.0331 59.824 27.6658 64.9994 40.547 64.9994C53.4282 64.9994 63.6827 59.8287 63.6827 54.565V42.7969C63.6827 42.7969 17.0331 43.8555 17.0331 42.7969Z" fill="#772A18"/>
 <path d="M17.0331 43.2676V53.5588C17.0331 58.6062 27.4758 62.6984 40.3579 62.6984C53.24 62.6984 63.6827 58.6062 63.6827 53.5588V43.2676C63.6827 43.2676 17.0331 44.2883 17.0331 43.2676Z" fill="#914437"/>
 <path d="M17.0331 43.2676V49.718C17.0331 54.7654 27.4758 58.8566 40.3579 58.8566C53.24 58.8566 63.6827 54.7654 63.6827 49.718V43.2676C63.6827 43.2676 17.0331 44.2883 17.0331 43.2676Z" fill="#772A18"/>
