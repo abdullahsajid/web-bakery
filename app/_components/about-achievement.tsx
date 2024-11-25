@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutAchievement = () => {
   return (
-    <div className='flex items-center justify-around bg-white p-5 rounded-lg mt-10 max-sm:flex-col max-sm:gap-y-5'>
+    <div className='flex items-center justify-around bg-white p-5 rounded-lg mt-10 max-sm:flex-col max-sm:gap-y-5 shadow-md'>
       <div className='flex flex-col items-center gap-3'>
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 50 40" fill="none">

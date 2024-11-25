@@ -26,7 +26,7 @@ export function NavBar() {
                 <Link href='/' className="text-[#753F21] font-semibold">
                     HOME
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/catalog' className="text-[#753F21] font-semibold">
                     CATALOG
                 </Link>
                 <Link href='/about' className="text-[#753F21] font-semibold">
@@ -56,7 +56,7 @@ export function NavBar() {
                 <Link href='/' className="text-[#753F21] font-semibold">
                     HOME
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/catalog' className="text-[#753F21] font-semibold">
                     CATALOG
                 </Link>
                 <Link href='/about' className="text-[#753F21] font-semibold"
