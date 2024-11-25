@@ -53,24 +53,28 @@ export function NavBar() {
                 <X className="text-[#201913]"/>
             </div>
             <div className="flex flex-col gap-5 justify-center items-center mt-7 w-full">
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/' className="text-[#753F21] font-semibold"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     HOME
                 </Link>
-                <Link href='/catalog' className="text-[#753F21] font-semibold">
+                <Link href='/catalog' className="text-[#753F21] font-semibold"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     CATALOG
                 </Link>
                 <Link href='/about' className="text-[#753F21] font-semibold"
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     ABOUT US
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/' className="text-[#753F21] font-semibold"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     DELIVERY
                 </Link>
                 <Link href='/contact' className="text-[#753F21] font-semibold"
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     CONTACT
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/' className="text-[#753F21] font-semibold"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     LOGIN
                 </Link>
             </div>
