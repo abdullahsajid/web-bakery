@@ -1,6 +1,6 @@
 export function AuthBanner(){
     return(
-        <svg width="509" height="684" viewBox="0 0 509 684" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="509" className="h-full" viewBox="0 0 509 684" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 2H452C479.614 2 502 24.3858 502 52V622C502 649.614 479.614 672 452 672H2V2Z" fill="#753F21"/>
 <line x1="16.8116" y1="1.41573" x2="507.812" y2="683.416" stroke="#FFF3EA" stroke-width="2"/>
 <line x1="192.962" y1="2.27282" x2="2.96205" y2="672.273" stroke="#FFF3EA" stroke-width="2"/>
