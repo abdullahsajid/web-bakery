@@ -17,7 +17,7 @@ const Signup = () => {
             Create Account
           </div>
           <div className='text-[#753F21]'>
-            If you don’t have an account register You can Register here!
+            If you don&apos;t have an account register You can Register here!
           </div>
         </div>
         <div className='flex flex-col w-full'>
@@ -78,7 +78,7 @@ const Signup = () => {
           <GoogleIcon/>
         </div>
         <div className='text-[#753F21]'>
-          If you don’t have an account register You can 
+          If you don&apos;t have an account register You can 
           <Link href={'/login'} className='font-bold'> Sign in!</Link>
         </div>
       </div>

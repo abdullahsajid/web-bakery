@@ -17,7 +17,7 @@ const Login = () => {
               Log In
             </div>
             <div className='text-[#753F21]'>
-              If you don't have an account register You can Register here!
+              If you don&apos;t have an account register You can Register here!
             </div>
           </div>
           <div className='flex flex-col w-full'>
@@ -55,7 +55,7 @@ const Login = () => {
             <GoogleIcon/>
           </div>
           <div className='text-[#753F21]'>
-            If you don't have an account register You can 
+            If you don&apos;t have an account register You can 
             <Link href={'/signup'} className='font-bold'> Sign up!</Link>
           </div>
         </div>
