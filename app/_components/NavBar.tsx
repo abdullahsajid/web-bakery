@@ -43,7 +43,7 @@ export function NavBar() {
                 <Link href='/contact' className="text-[#753F21] font-semibold">
                     CONTACT
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold">
+                <Link href='/login' className="text-[#753F21] font-semibold">
                     LOGIN
                 </Link>
             </nav>
@@ -73,7 +73,7 @@ export function NavBar() {
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     CONTACT
                 </Link>
-                <Link href='/' className="text-[#753F21] font-semibold"
+                <Link href='/login' className="text-[#753F21] font-semibold"
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     LOGIN
                 </Link>
