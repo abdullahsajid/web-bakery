@@ -5,8 +5,8 @@ import { AuthBanner } from '../_icons/AuthBanner'
 import { GoogleIcon } from '../_icons/GoogleIcon'
 import { Eye,EyeOff  } from 'lucide-react'
 import Link from 'next/link'
-import UserService from '../services/user-service'
-import Toast from '../_components/toast'
+import {UserService} from '../services/user-service'
+import {Toast} from '../_components/toast'
 import { useRouter } from 'next/navigation';
 
 const Signup = () => {
@@ -55,7 +55,7 @@ const Signup = () => {
         router.push('/');
       }
     }catch(err){
-      // console.log(err);
+      console.log(err);
       Toast.error('Please try again');
       setIsLoading(false);
     }finally{
