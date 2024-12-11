@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GoogleOAuthProvider clientId={`${process.env.CLIENT_ID}`}>
+        <GoogleOAuthProvider clientId={``}>
           <Toaster/>
           <NavBar />
           {children}
@@ -41,3 +41,4 @@ export default function RootLayout({
     </html>
   );
 }
+// ${process.env.CLIENT_ID}
