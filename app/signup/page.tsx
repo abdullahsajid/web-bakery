@@ -8,6 +8,8 @@ import Link from 'next/link'
 import {UserService} from '../services/user-service'
 import {Toast} from '../_components/toast'
 import { useRouter } from 'next/navigation';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
 
 const Signup = () => {
   const [username,setUserName] = useState<string>('');
@@ -45,8 +47,7 @@ const Signup = () => {
         Toast.error(response.message);
       }
       if(response.status === 201){
-        Toast.success('User created successfully');
-        setIsLoading(false);
+        Toast.success('Sign-in successfully');
         setIsLoading(false);
         setUserName('');
         setEmail('');
@@ -57,6 +58,33 @@ const Signup = () => {
     }catch(err){
       console.log(err);
       Toast.error('Please try again');
+      setIsLoading(false);
+    }finally{
+      setIsLoading(false);
+    }
+  }
+
+    const handlerGoogleSignIn = async (googleRes:any) => {
+    try{
+      setIsLoading(true);
+      const data = {
+        email: googleRes.email,
+        username: googleRes.name,
+        googleId: googleRes.sub
+      }
+      const response = await UserService.login(data);
+      if(response.status === 400){
+        Toast.error(response.message);
+      }
+      if(response.status === 200){
+        Toast.success('sign-in successfully');
+        setIsLoading(false);
+        setEmail('');
+        setPassword('');
+        router.push('/');
+      }
+    }catch(err){
+      console.log(err);
       setIsLoading(false);
     }finally{
       setIsLoading(false);
@@ -131,6 +159,7 @@ const Signup = () => {
               rounded-xl outline-none text-[#fff] w-[200px]
               ${isLoading ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
               disabled={isLoading}
+              type='submit'
           >
                 Sign up
           </button>
@@ -140,7 +169,17 @@ const Signup = () => {
           Or login with your social network
         </div>
         <div className='bg-[#fff] border-4 border-[#fff] shadow-lg px-3'>
-          <GoogleIcon/>
+          <GoogleLogin
+              onSuccess={(credentialResponse:any) => {
+                const credentialResDecode = jwtDecode(credentialResponse.credential);
+                if(credentialResDecode.sub){
+                  handlerGoogleSignIn(credentialResDecode);
+                }
+              }}
+              onError={() => {
+                console.log('Login Failed');
+              }}
+          />
         </div>
         <div className='text-[#753F21]'>
           If you don&apos;t have an account register You can 
