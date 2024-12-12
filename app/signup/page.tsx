@@ -168,7 +168,7 @@ const Signup = () => {
         <div className='text-[#753F21]'>
           Or login with your social network
         </div>
-        <div className='bg-[#fff] border-4 border-[#fff] shadow-lg px-3'>
+        <div className='px-3'>
           <GoogleLogin
               onSuccess={(credentialResponse:any) => {
                 const credentialResDecode = jwtDecode(credentialResponse.credential);
