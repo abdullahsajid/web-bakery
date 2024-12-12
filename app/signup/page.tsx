@@ -2,7 +2,6 @@
 import React,{useState}from 'react'
 import { Input } from '../_components/input'
 import { AuthBanner } from '../_icons/AuthBanner'
-import { GoogleIcon } from '../_icons/GoogleIcon'
 import { Eye,EyeOff  } from 'lucide-react'
 import Link from 'next/link'
 import {UserService} from '../services/user-service'
@@ -10,6 +9,8 @@ import {Toast} from '../_components/toast'
 import { useRouter } from 'next/navigation';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
+import { CredentialResponse, DecodedCredentialResponse } from '../utils/products'
+
 
 const Signup = () => {
   const [username,setUserName] = useState<string>('');
@@ -64,7 +65,7 @@ const Signup = () => {
     }
   }
 
-    const handlerGoogleSignIn = async (googleRes:any) => {
+    const handlerGoogleSignIn = async (googleRes:DecodedCredentialResponse) => {
     try{
       setIsLoading(true);
       const data = {
@@ -171,10 +172,12 @@ const Signup = () => {
         </div>
         <div className='px-3'>
           <GoogleLogin
-              onSuccess={(credentialResponse:any) => {
-                const credentialResDecode = jwtDecode(credentialResponse.credential);
-                if(credentialResDecode.sub){
-                  handlerGoogleSignIn(credentialResDecode);
+              onSuccess={(credentialResponse:CredentialResponse) => {
+                if(credentialResponse.credential){
+                  const credentialResDecode: DecodedCredentialResponse = jwtDecode(credentialResponse.credential);
+                  if(credentialResDecode.sub){
+                    handlerGoogleSignIn(credentialResDecode);
+                  }
                 }
               }}
               onError={() => {

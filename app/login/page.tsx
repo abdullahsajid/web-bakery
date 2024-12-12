@@ -1,7 +1,6 @@
 'use client'
 import React,{useState} from 'react'
 import { AuthBanner } from '../_icons/AuthBanner'
-import { GoogleIcon } from '../_icons/GoogleIcon'
 import { Eye, EyeOff } from 'lucide-react'
 import Link from 'next/link'
 import { Input } from '../_components/input'
@@ -10,6 +9,7 @@ import { UserService } from '../services/user-service'
 import { useRouter } from 'next/navigation';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
+import { CredentialResponse, DecodedCredentialResponse } from '../utils/products'
 
 const Login = () => {
   const [email,setEmail] = useState<string>('');
@@ -54,7 +54,7 @@ const Login = () => {
     }
   }
 
-  const handlerGoogleSignIn = async (googleRes:any) => {
+  const handlerGoogleSignIn = async (googleRes:DecodedCredentialResponse) => {
     try{
       setIsLoading(true);
       const data = {
@@ -136,16 +136,18 @@ const Login = () => {
           </div>
           <div className=' border-4 border-[#fff] cursor-pointer'>
             <GoogleLogin
-              onSuccess={(credentialResponse:any) => {
-                const credentialResDecode = jwtDecode(credentialResponse.credential);
-                if(credentialResDecode.sub){
-                  handlerGoogleSignIn(credentialResDecode);
+              onSuccess={(credentialResponse:CredentialResponse) => {
+                if(credentialResponse.credential){
+                  const credentialResDecode: DecodedCredentialResponse = jwtDecode(credentialResponse.credential);
+                  if(credentialResDecode.sub){
+                    handlerGoogleSignIn(credentialResDecode);
+                  }
                 }
               }}
               onError={() => {
                 console.log('Login Failed');
               }}
-            />
+          />
           </div>
           <div className='text-[#753F21]'>
             If you don&apos;t have an account register You can 

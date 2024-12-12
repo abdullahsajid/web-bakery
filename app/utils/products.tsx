@@ -12,6 +12,16 @@ type Categories = {
   [key: string]: CategoryData;
 };
 
+export type CredentialResponse = {
+  credential?: string;
+};
+
+export type DecodedCredentialResponse = {
+  sub: string;
+  email?: string;
+  name?: string;
+};
+
 export const products : Categories = {
     donuts: {
         products: [
