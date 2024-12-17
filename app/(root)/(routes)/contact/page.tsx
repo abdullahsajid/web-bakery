@@ -1,6 +1,7 @@
-import ContactAddress from "../_components/Contact-Address";
-import ContactForm from "../_components/Contact-form";
-import ContactHero from "../_components/Contact-hero";
+import ContactAddress from "@/app/_components/Contact-Address";
+import ContactForm from "@/app/_components/Contact-form";
+import ContactHero from "@/app/_components/Contact-hero";
+
 const Contact = () => {
     return (
         <div>

@@ -1,7 +1,7 @@
-import React from 'react'
-import AboutHero from '../_components/about-hero'
-import AboutDetails from '../_components/about-details'
-import AboutAchievement from '../_components/about-achievement'
+import AboutAchievement from '@/app/_components/about-achievement'
+import AboutDetails from '@/app/_components/about-details'
+import AboutHero from '@/app/_components/about-hero'
+
 
 const page = () => {
   return (

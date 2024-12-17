@@ -1,6 +1,6 @@
-import React from 'react'
-import CatalogItem from '../_components/catalog-item';
-import CatalogRelatedProduct from '../_components/catalog-related-product';
+import CatalogItem from '@/app/_components/catalog-item';
+import CatalogRelatedProduct from '@/app/_components/catalog-related-product';
+
 
 const Catalog = () => {
   return (

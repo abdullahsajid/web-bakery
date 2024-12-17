@@ -1,15 +1,15 @@
 'use client'
 import React,{useState}from 'react'
-import { Input } from '../_components/input'
-import { AuthBanner } from '../_icons/AuthBanner'
+import { Input } from '../../../_components/input'
+import { AuthBanner } from '../../../_icons/AuthBanner'
 import { Eye,EyeOff  } from 'lucide-react'
 import Link from 'next/link'
-import {UserService} from '../services/user-service'
-import {Toast} from '../_components/toast'
+import {UserService} from '../../../services/user-service'
+import {Toast} from '../../../_components/toast'
 import { useRouter } from 'next/navigation';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
-import { CredentialResponse, DecodedCredentialResponse } from '../utils/products'
+import { CredentialResponse, DecodedCredentialResponse } from '../../../utils/products'
 
 
 const Signup = () => {
