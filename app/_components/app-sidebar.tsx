@@ -1,4 +1,5 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { LayoutDashboard ,Store ,ShoppingBag ,Users ,Box ,ChartArea
+   ,Folder , Download } from "lucide-react"
 
 import {
   Sidebar,
@@ -11,39 +12,53 @@ import {
   SidebarMenuItem,
 } from "@/app/_components/ui/sidebar"
 
-// Menu items.
 const items = [
   {
-    title: "Home",
+    title: "Dashboard",
     url: "#",
-    icon: Home,
+    icon: LayoutDashboard,
   },
   {
-    title: "Inbox",
+    title: "Orders",
     url: "#",
-    icon: Inbox,
+    icon: Store,
   },
   {
-    title: "Calendar",
+    title: "Sales",
     url: "#",
-    icon: Calendar,
+    icon: ShoppingBag,
   },
   {
-    title: "Search",
+    title: "Users",
     url: "#",
-    icon: Search,
+    icon: Users,
   },
   {
-    title: "Settings",
+    title: "Products",
     url: "#",
-    icon: Settings,
+    icon: Box ,
+  },
+  {
+    title: "Statistics",
+    url: "#",
+    icon: ChartArea,
+  },
+  {
+    title: "Files",
+    url: "#",
+    icon: Folder ,
+  },
+  {
+    title: "Reports",
+    url: "#",
+    icon: Download,
   },
 ]
 
 export function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarContent>
+      <SidebarContent className="bg-[#ffffff]">
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
