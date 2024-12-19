@@ -1,5 +1,5 @@
 import { LayoutDashboard ,Store ,ShoppingBag ,Users ,Box ,ChartArea
-   ,Folder , Download } from "lucide-react"
+   ,Folder , Download,ShoppingBasket } from "lucide-react"
 
 import {
   Sidebar,
@@ -60,7 +60,9 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent className="bg-[#ffffff]">
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>
+            <ShoppingBasket/>
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (

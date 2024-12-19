@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { SidebarProvider } from '../_components/ui/sidebar'
+import { SidebarProvider, SidebarTrigger } from '../_components/ui/sidebar'
 import { AppSidebar } from '../_components/app-sidebar'
 
 
@@ -11,6 +11,7 @@ return (
     <SidebarProvider>
         <AppSidebar/>
         <main>
+        <SidebarTrigger />
             {children}
         </main>
     </SidebarProvider>
