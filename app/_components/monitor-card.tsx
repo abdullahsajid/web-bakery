@@ -2,7 +2,7 @@ import React from 'react'
 
 const MonitorCard = () => {
   return (
-    <div className='flex flex-col gap-4 p-4 bg-white rounded-lg shadow-md w-80'>
+    <div className='flex flex-col gap-4 p-4 bg-white rounded-lg shadow-md w-full'>
       <div className='flex gap-6'>
         <div className='text-black'>Product Viewed</div>
         <div className='text-green-600'>2.9% +</div>
