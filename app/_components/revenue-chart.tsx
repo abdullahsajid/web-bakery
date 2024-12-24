@@ -41,7 +41,7 @@ export function RevenueChart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Area Chart - Stacked</CardTitle>
+        <CardTitle>Total Revenue</CardTitle>
         <CardDescription>
           Showing total visitors for the last 6 months
         </CardDescription>
