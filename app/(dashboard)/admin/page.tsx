@@ -1,6 +1,7 @@
 import Countries from '@/app/_components/Countries';
 import MonitorCard from '@/app/_components/monitor-card';
 import { RevenueChart } from '@/app/_components/revenue-chart';
+import { DataTableDemo } from '@/app/_components/TopSelling';
 import React from 'react'
 
 const Page = () => {
@@ -19,6 +20,9 @@ const Page = () => {
         <div className='h-full'>
           <Countries/>
         </div>
+      </div>
+      <div>
+        <DataTableDemo/>
       </div>
     </div>
   )
