@@ -13,9 +13,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown} from "lucide-react"
-
-import { Button } from "@/app/_components/ui/button"
 import {
   Table,
   TableBody,

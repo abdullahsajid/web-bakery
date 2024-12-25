@@ -15,12 +15,12 @@ import {
 const items = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/admin",
     icon: LayoutDashboard,
   },
   {
     title: "Orders",
-    url: "#",
+    url: "/admin/orders",
     icon: Store,
   },
   {
