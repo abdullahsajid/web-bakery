@@ -3,7 +3,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { Button } from '@/app/_components/ui/button';
 import React from 'react'
 
-const Page = () => {
+const Orders = () => {
   return (
     <div className='p-4'>
       <div className='flex items-center justify-between gap-5 divide-x mb-4'>
@@ -32,4 +32,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Orders;

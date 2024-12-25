@@ -44,12 +44,9 @@ const data: Payment[] = [
 			productImage: 'https://dashboard.shadcnuikit.com/images/products/1.png',
 			productName: 'Bag',
 		},
-		customer: {
-			customerName: 'Jack',
-			customerEmail: 'jack@gmail.com',
-		},
+		category: "clothes",
 		date: 'Jun 23, 2024',
-		type: 'Sale',
+		stock: "50",
 		price: 100,
 		status: 'pending',
 	},
@@ -60,12 +57,9 @@ const data: Payment[] = [
 			productImage: 'https://dashboard.shadcnuikit.com/images/products/1.png',
 			productName: 'Bag',
 		},
-		customer: {
-			customerName: 'Jack',
-			customerEmail: 'jack@gmail.com',
-		},
+		category: "cloths",
 		date: 'Jun 23, 2024',
-		type: 'Return',
+		stock: "50",
 		price: 100,
 		status: 'completed',
 	},
@@ -76,12 +70,9 @@ const data: Payment[] = [
 			productImage: 'https://dashboard.shadcnuikit.com/images/products/1.png',
 			productName: 'Bag',
 		},
-		customer: {
-			customerName: 'Jack',
-			customerEmail: 'jack@gmail.com',
-		},
+		category: "cloths",
 		date: 'Jun 23, 2024',
-		type: 'Sale',
+		stock: "50",
 		price: 100,
 		status: 'pending',
 	},
@@ -96,12 +87,9 @@ export type Payment = {
 		productImage: string;
 		productName: string;
 	};
-	customer: {
-		customerName: string;
-		customerEmail: string;
-	};
+	category: string;
 	date: string;
-	type: string;
+	stock: string;
 };
 
 export const columns: ColumnDef<Payment>[] = [
@@ -164,12 +152,11 @@ export const columns: ColumnDef<Payment>[] = [
 		cell: ({ row }) => <div className='lowercase'>{row.getValue('price')}</div>,
 	},
 	{
-		accessorKey: 'customer',
-		header: 'Customer',
+		accessorKey: 'category',
+		header: 'Category',
 		cell: ({ row }) => (
 			<div className='flex flex-col'>
-				<div className='font-bold'>{row.original.customer.customerName}</div>
-				<div>{row.original.customer.customerEmail}</div>
+				<div>{row.getValue('category')}</div>
 			</div>
 		),
 	},
@@ -179,9 +166,9 @@ export const columns: ColumnDef<Payment>[] = [
 		cell: ({ row }) => <div className='capitalize'>{row.getValue('date')}</div>,
 	},
 	{
-		accessorKey: 'type',
-		header: 'Type',
-		cell: ({ row }) => <div className='capitalize'>{row.getValue('type')}</div>,
+		accessorKey: 'stock',
+		header: 'Stock',
+		cell: ({ row }) => <div className='capitalize'>{row.getValue('stock')}</div>,
 	},
 	{
 		accessorKey: 'status',
@@ -202,19 +189,15 @@ export const columns: ColumnDef<Payment>[] = [
 						<Button
 							variant='ghost'
 							className='h-8 w-8 p-0'>
-							<span className='sr-only'>Open menu</span>
+							<span className='sr-only'>View details</span>
 							<MoreHorizontal />
 						</Button>
 					</DropdownMenuTrigger>
 					<DropdownMenuContent align='end'>
-						<DropdownMenuLabel>Actions</DropdownMenuLabel>
-						<DropdownMenuItem
-							onClick={() => navigator.clipboard.writeText(payment.id)}>
-							Copy payment ID
-						</DropdownMenuItem>
+						<DropdownMenuLabel>View details</DropdownMenuLabel>
 						<DropdownMenuSeparator />
-						<DropdownMenuItem>View customer</DropdownMenuItem>
-						<DropdownMenuItem>View payment details</DropdownMenuItem>
+						<DropdownMenuItem>Edit</DropdownMenuItem>
+						<DropdownMenuItem>Delete</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
 			);
@@ -222,7 +205,7 @@ export const columns: ColumnDef<Payment>[] = [
 	},
 ];
 
-export function OrdersTable() {
+export function ProductsTable() {
 	const [sorting, setSorting] = React.useState<SortingState>([]);
 	const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
 		[]
