@@ -180,9 +180,8 @@ export const columns: ColumnDef<Payment>[] = [
 	{
 		id: 'actions',
 		enableHiding: false,
-		cell: ({ row }) => {
-			const payment = row.original;
-
+		cell: () => {
+			
 			return (
 				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
