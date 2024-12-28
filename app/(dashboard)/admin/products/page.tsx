@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import {
 	Breadcrumb,
@@ -13,6 +11,7 @@ import { Button } from '@/app/_components/ui/button';
 import { ProductsTable } from '@/app/_components/productsTable';
 import ContentCards from '@/app/_components/product-card';
 import { CirclePlus } from 'lucide-react';
+import Link from 'next/link';
 
 const Products = () => {
 	return (
@@ -32,10 +31,12 @@ const Products = () => {
 						</BreadcrumbList>
 					</Breadcrumb>
 				</div>
-				<Button>
-					<CirclePlus />
-					Create Products
-				</Button>
+				<Link href='/admin/products/create'>
+					<Button>
+						<CirclePlus />
+						Create Products
+					</Button>
+				</Link>
 			</div>
 			<div className='grid grid-cols-4 space-x-5 mb-5'>
 				<ContentCards
