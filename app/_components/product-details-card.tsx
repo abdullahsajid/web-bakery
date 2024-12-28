@@ -1,6 +1,12 @@
 import React from 'react';
 
-const ProductDetailsCard : React.FC<any> = ({icon,heading,value}) => {
+type Props = {
+	icon: string;
+	heading: string;
+	value: string;
+};
+
+const ProductDetailsCard : React.FC<Props> = ({icon,heading,value}) => {
 	return (
 		<div className='flex items-center gap-3 border p-4 hover:border-primary/30 transition-all'>
             <span className='border p-3 py-1 rounded-full'>{icon}</span>

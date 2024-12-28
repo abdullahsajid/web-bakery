@@ -61,7 +61,7 @@ export function AccountForm() {
 		defaultValues,
 	});
 
-	function onSubmit(data: AccountFormValues) {
+	function onSubmit() {
 		// toast({
 		//   title: "You submitted the following values:",
 		//   description: (

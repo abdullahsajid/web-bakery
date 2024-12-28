@@ -1,7 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/app/_components/ui/card';
 import React from 'react';
-
-const ContentCards : React.FC<any> = ({title,revenue,margin}) => {
+type Props = {
+	title: string;
+	revenue: string;
+	margin: string;
+}
+const ContentCards : React.FC<Props> = ({title,revenue,margin}) => {
 	return (
 		<Card>
 			<CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
