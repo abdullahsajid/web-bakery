@@ -1,3 +1,5 @@
+/** @format */
+
 'use client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -15,7 +17,13 @@ import {
 } from '@/app/_components/ui/form';
 import { Input } from '@/app/_components/ui/input';
 import { Textarea } from '@/app/_components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/_components/ui/select';
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from '@/app/_components/ui/select';
 
 const accountFormSchema = z.object({
 	name: z
@@ -35,9 +43,9 @@ const accountFormSchema = z.object({
 			message: 'Description must not be longer than 100 characters.',
 		}),
 	images: z.string(),
-    price: z.number(),
-    status: z.string(),
-    categories: z.string(),
+	price: z.number(),
+	status: z.string(),
+	categories: z.string(),
 });
 
 type AccountFormValues = z.infer<typeof accountFormSchema>;
@@ -68,125 +76,131 @@ export function AccountForm() {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className='space-y-8 bg-[#fff] border p-4 mb-5'>
-				<h1 className='font-bold text-xl'>Product Details</h1>
-				<FormField
-					control={form.control}
-					name='name'
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Name</FormLabel>
-							<FormControl>
-								<Input
-									placeholder='Your name'
-									{...field}
-								/>
-							</FormControl>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
-				<FormField
-					control={form.control}
-					name='description'
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Description</FormLabel>
-							<FormControl>
-								<Textarea
-									placeholder='Description'
-									// className="resize-none"
-									{...field}
-								/>
-							</FormControl>
-						</FormItem>
-					)}
-				/>
-				<FormField
-					control={form.control}
-					name='images'
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Images</FormLabel>
-							<FormControl>
-								<Input
-									type='file'
-									placeholder='Upload Image'
-									{...field}
-								/>
-							</FormControl>
-						</FormItem>
-					)}
-				/>
-				<FormField
-					control={form.control}
-					name='price'
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Price</FormLabel>
-							<FormControl>
-								<Input
-									type='number'
-									placeholder='Price'
-									{...field}
-								/>
-							</FormControl>
-						</FormItem>
-					)}
-				/>
-				<FormField
-					control={form.control}
-					name='status'
-					render={({ field }) => {
-						return (
+				className='space-y-4'>
+				<div className='bg-[#fff] border p-4 mb-5 space-y-4'>
+					<h1 className='font-bold text-xl'>Product Details</h1>
+					<FormField
+						control={form.control}
+						name='name'
+						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Status</FormLabel>
-								<Select
-                                    onValueChange={field.onChange}
-                                    defaultValue={field.value}
-									{...field}>
-									<FormControl>
-										<SelectTrigger>
-											<SelectValue placeholder='Select' />
-										</SelectTrigger>
-									</FormControl>
-									<SelectContent>
-										<SelectItem value='active'>Active</SelectItem>
-										<SelectItem value='draft'>Draft</SelectItem>
-									</SelectContent>
-								</Select>
+								<FormLabel>Name</FormLabel>
+								<FormControl>
+									<Input
+										placeholder='Your name'
+										{...field}
+									/>
+								</FormControl>
 								<FormMessage />
 							</FormItem>
-						);
-					}}
-				/>
-				<FormField
-					control={form.control}
-					name='categories'
-					render={({ field }) => {
-						return (
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name='description'
+						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Categories</FormLabel>
-								<Select
-                                    onValueChange={field.onChange}
-                                    defaultValue={field.value}
-									{...field}>
-									<FormControl>
-										<SelectTrigger>
-											<SelectValue placeholder='Select' />
-										</SelectTrigger>
-									</FormControl>
-									<SelectContent>
-										<SelectItem value='bakery'>Bakery</SelectItem>
-										<SelectItem value='sweets'>Sweets</SelectItem>
-									</SelectContent>
-								</Select>
-								<FormMessage />
+								<FormLabel>Description</FormLabel>
+								<FormControl>
+									<Textarea
+										placeholder='Description'
+										// className="resize-none"
+										{...field}
+									/>
+								</FormControl>
 							</FormItem>
-						);
-					}}
-				/>
-				<Button type='submit'>Update account</Button>
+						)}
+					/>
+				</div>
+				<div className='bg-[#fff] border p-4 mb-5 space-y-4'>
+					<FormField
+						control={form.control}
+						name='images'
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>Images</FormLabel>
+								<FormControl>
+									<Input
+										type='file'
+										placeholder='Upload Image'
+										{...field}
+									/>
+								</FormControl>
+							</FormItem>
+						)}
+					/>
+				</div>
+				<div className='bg-[#fff] border p-4 mb-5 space-y-4'>
+					<FormField
+						control={form.control}
+						name='price'
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>Price</FormLabel>
+								<FormControl>
+									<Input
+										type='number'
+										placeholder='Price'
+										{...field}
+									/>
+								</FormControl>
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name='status'
+						render={({ field }) => {
+							return (
+								<FormItem>
+									<FormLabel>Status</FormLabel>
+									<Select
+										onValueChange={field.onChange}
+										defaultValue={field.value}
+										{...field}>
+										<FormControl>
+											<SelectTrigger>
+												<SelectValue placeholder='Select' />
+											</SelectTrigger>
+										</FormControl>
+										<SelectContent>
+											<SelectItem value='active'>Active</SelectItem>
+											<SelectItem value='draft'>Draft</SelectItem>
+										</SelectContent>
+									</Select>
+									<FormMessage />
+								</FormItem>
+							);
+						}}
+					/>
+					<FormField
+						control={form.control}
+						name='categories'
+						render={({ field }) => {
+							return (
+								<FormItem>
+									<FormLabel>Categories</FormLabel>
+									<Select
+										onValueChange={field.onChange}
+										defaultValue={field.value}
+										{...field}>
+										<FormControl>
+											<SelectTrigger>
+												<SelectValue placeholder='Select' />
+											</SelectTrigger>
+										</FormControl>
+										<SelectContent>
+											<SelectItem value='bakery'>Bakery</SelectItem>
+											<SelectItem value='sweets'>Sweets</SelectItem>
+										</SelectContent>
+									</Select>
+									<FormMessage />
+								</FormItem>
+							);
+						}}
+					/>
+				</div>
+				<Button type='submit'>Create Product</Button>
 			</form>
 		</Form>
 	);
