@@ -23,7 +23,6 @@ import {
 } from '@/app/_components/ui/table';
 import {
 	DropdownMenu,
-	DropdownMenuCheckboxItem,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuLabel,
