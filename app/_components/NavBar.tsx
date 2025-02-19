@@ -9,7 +9,7 @@ export function NavBar() {
     
     return (
         <>
-        <header className="flex bg-[#FFF3EA] py-6 px-8 max-sm:px-5 transition-all">
+        <header className="flex bg-[#FFF3EA] sticky top-0 z-50 py-4 px-8 max-sm:px-5 transition-all">
             <nav className="hidden max-sm:flex flex items-center justify-between w-full transition-all relative">
                 <div>
                     <Link href='/' className="flex items-center gap-1 text-[#753F21]">

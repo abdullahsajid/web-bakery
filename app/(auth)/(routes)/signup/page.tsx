@@ -94,9 +94,11 @@ const Signup = () => {
 
 
   return (
-    <div className='flex justify-center items-center my-5'>
+    <div className='flex justify-center items-center h-screen'>
+      <div className='flex items-center justify-center w-full max-w-[1200px] mx-auto
+      max-sm:mx-0 max-sm:w-full'>
       <div className='flex flex-col justify-center items-center 
-      bg-[#fff] py-5 rounded-l-3xl px-20 gap-7 shadow-lg'>
+        bg-[#fff] py-5 rounded-l-3xl px-20 gap-4 shadow-lg max-sm:px-10 max-sm:w-full max-sm:mx-4'>
         <div className='flex flex-col items-center justify-center gap-2'>
           <div className='text-[#753F21] text-[36px]'>
             Create Account
@@ -185,14 +187,15 @@ const Signup = () => {
               }}
           />
         </div>
-        <div className='text-[#753F21]'>
+        <div className='text-[#753F21] max-sm:text-center max-sm:flex max-sm:justify-center max-sm:flex-col max-sm:items-center'>
           If you don&apos;t have an account register You can 
           <Link href={'/login'} className='font-bold'> Sign in!</Link>
         </div>
       </div>
-      <div className='h-full'>
+      <div className='h-full flex justify-center items-center max-sm:hidden'>
         <AuthBanner/>
-      </div>
+        </div>
+        </div>
     </div>
   )
 }
