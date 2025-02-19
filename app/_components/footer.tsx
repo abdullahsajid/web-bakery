@@ -45,9 +45,9 @@ export function Footer() {
                 <div className="bg-[#1877F2] rounded-md p-1 shadow">
                     <Facebook/>
                 </div>
-                <div className="insta rounded-md p-1 shadow">
+                <a href="https://www.instagram.com/supersweetsbakers/" className="insta rounded-md p-1 shadow">
                     <Instagram/>
-                </div>
+                </a>
             </div>
         </div>
     )
