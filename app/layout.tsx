@@ -10,6 +10,7 @@ const roboto = Roboto({
 })
 import { Toaster  } from "react-hot-toast";
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import ReactGA from "react-ga4";
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   title: "Super Sweets & Bakers",
   description: "Bakery Sweets",
 };
-
+ReactGA.initialize("G-E00S0WS0PE");
 export default function RootLayout({
   children,
 }: Readonly<{
