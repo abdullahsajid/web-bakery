@@ -10,7 +10,6 @@ const roboto = Roboto({
 })
 import { Toaster  } from "react-hot-toast";
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import ReactGA from "react-ga4";
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
   title: "Super Sweets & Bakers",
   description: "Bakery Sweets",
 };
-ReactGA.initialize("G-E00S0WS0PE");
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +33,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00S0WS0PE"></script>
+      <script id="google-analytics">
+  {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E00S0WS0PE');
+  `}
+</script>
       <body
         className={`${roboto.className} antialiased`}
       >
