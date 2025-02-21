@@ -4,11 +4,24 @@ import { Donut } from "../_icons/Donut"
 import croissant from "../../public/assets/Croissant.png"
 import Image from "next/image"
 import { motion } from "framer-motion";
+import Confetti from 'react-confetti';
+import { useEffect, useState } from "react";
+export function Hero() {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
 
-export function Hero(){
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }, []);
     return(
         <div className="relative flex items-center justify-center bg-[#201913] p-5 w-full min-h-screen overflow-hidden">
-  
+  <Confetti
+            width={width}
+            height={height}
+            numberOfPieces={300}
+            recycle={false}
+          />
         <motion.div
           initial={{ scale: 0, opacity: 0, filter: 'blur(30px)' }}
           whileInView={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
