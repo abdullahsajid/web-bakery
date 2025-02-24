@@ -27,6 +27,11 @@ export function CatalogNav() {
                 </span>
             </motion.div>     
             <div className="flex gap-10 max-sm:flex-wrap max-sm:items-center max-sm:justify-center">
+                <div className="flex flex-col items-center cursor-pointer"
+                    onClick={() => handlerNav('cake')}>
+                    <Cake/>
+                    <span className="text-[#753F21]">Cake</span>
+                </div>
                 <div className="flex flex-col items-center cursor-pointer" 
                     onClick={() => handlerNav('donuts')}>
                     <DonutNav/>
@@ -51,11 +56,6 @@ export function CatalogNav() {
                     onClick={() => handlerNav('brownies')}>
                     <Brownies/>
                     <span className="text-[#753F21]">Brownies</span>
-                </div>
-                <div className="flex flex-col items-center cursor-pointer"
-                    onClick={() => handlerNav('cake')}>
-                    <Cake/>
-                    <span className="text-[#753F21]">Cake</span>
                 </div>
             </div>
         </div>
